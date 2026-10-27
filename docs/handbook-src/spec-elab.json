@@ -1,0 +1,20 @@
+{
+  "parts": [
+    "agent-00-前言.md",
+    "agent-01-定位与架构.md",
+    "agent-02-核心模块.md",
+    "agent-03-踩坑实录.md",
+    "agent-04-速答与演示.md"
+  ],
+  "out": "elab-agent项目面试讲解手册.docx",
+  "title": "elab-agent 项目面试讲解手册",
+  "subtitle": "工具调用型智能体：代码 · 原理 · 真实踩坑实录",
+  "englishLabel": "PROJECT HANDBOOK",
+  "metaLines": [
+    "项目仓库：github.com/xiaosoxk/toolsbox",
+    "内容：架构总览 · 核心模块精讲 · 七个真实踩坑 · 速答与演示",
+    "编制时间：2026 年 10 月"
+  ],
+  "footerLeft": "ELAB-AGENT PROJECT HANDBOOK",
+  "footerRight": "2026.10"
+}
