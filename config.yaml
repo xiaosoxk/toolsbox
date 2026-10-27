@@ -1,0 +1,27 @@
+# elab-agent 配置 —— 本机真实路径已自动探测并填好，软件换盘后改这里即可
+
+paths:
+  matlab: "E:\\ma\\bin\\matlab.exe"
+  pycharm: "E:\\pytharm\\PyCharm Community Edition 2023.2.3\\bin\\pycharm64.exe"
+  cubemx: "D:\\stm32cube\\STM32CubeMX.exe"
+  keil_uv4: "D:\\Keil_v5\\UV4\\UV4.exe"
+  proteus: "D:\\Program Files (x86)\\Labcenter Electronics\\Proteus 8 Professional\\BIN\\PDS.EXE"
+  multisim: "E:\\mu13\\Circuit Design Suite 13.0\\multisim.exe"
+  wps: "D:\\Users\\赖佳豪\\AppData\\Local\\Kingsoft\\WPS Office\\12.1.0.29161\\office6\\wps.exe"
+
+llm:
+  # OpenAI 兼容接口均可：智谱 GLM / DeepSeek / Qwen / 本地 Ollama
+  # 智谱:  https://open.bigmodel.cn/api/paas/v4        模型如 glm-4-flash / glm-4-plus
+  # DeepSeek: https://api.deepseek.com/v1              模型如 deepseek-chat
+  # Ollama:  http://127.0.0.1:11434/v1                 模型如 qwen2.5:14b
+  api_base: "https://open.bigmodel.cn/api/paas/v4"
+  model: "glm-4-flash"
+  temperature: 0.3
+  timeout_seconds: 180
+  # 密钥从环境变量 ELAB_API_KEY 读取，不要写进本文件（会泄露到 git）
+
+agent:
+  max_steps: 15          # 一次任务最多工具调用轮数
+  tool_output_limit: 8000  # 单次工具结果进入上下文的最大字符数
+
+# MATLAB 首次启动约 20~60 秒属正常现象（license 检查 + JVM）
